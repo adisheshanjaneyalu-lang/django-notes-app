@@ -86,17 +86,13 @@ WSGI_APPLICATION = 'notesapp.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'notes_db',
-        'USER': 'rootlocalhost',
-        'PASSWORD': 'your_password',
-        'HOST': '172.31.8.194', # Use the Private IP of your Ubuntu server
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
